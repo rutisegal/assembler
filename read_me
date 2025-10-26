@@ -1,7 +1,3 @@
-מעולה 😄 הנה גרסה ערוכה, מקצועית ומוכנה להעלאה ל-GitHub (כולל שיפורים מינוריים בניסוח, קריאות ופורמט Markdown):
-
----
-
 # 📁 Assembler Project – README
 
 This project was developed as part of **course 20465**.
@@ -153,8 +149,3 @@ When both operands are registers, they are encoded in a single 16-bit word follo
 * Designed for modularity, clarity, and accurate two-pass processing.
 
 ---
-
-Would you like me to also:
-
-1. **להמיר את זה לקובץ `README.md` מוכן להעלאה לגיטהאב**, או
-2. **להוסיף דוגמת פקודות קלט/פלט קצרה** (כמו איך נראה קובץ `.as` לדוגמה)?
