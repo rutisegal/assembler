@@ -1,32 +1,22 @@
-assembler: assembler.o data_handling.o first_pass.o first_pass_utils.o instruction_handling.o macro_utils.o pre_assembler.o second_pass.o second_pass_utils.o
-	gcc -ansi -pedantic -Wall -o assembler assembler.o data_handling.o first_pass.o first_pass_utils.o instruction_handling.o macro_utils.o pre_assembler.o second_pass.o second_pass_utils.o
+CC = gcc
+CFLAGS = -ansi -pedantic -Wall
+SRC_DIR = src
 
-assembler.o: assembler.c assembler.h
-	gcc -ansi -pedantic -Wall -c assembler.c
+OBJS = $(SRC_DIR)/assembler.o \
+       $(SRC_DIR)/data_handling.o \
+       $(SRC_DIR)/first_pass.o \
+       $(SRC_DIR)/first_pass_utils.o \
+       $(SRC_DIR)/instruction_handling.o \
+       $(SRC_DIR)/macro_utils.o \
+       $(SRC_DIR)/pre_assembler.o \
+       $(SRC_DIR)/second_pass.o \
+       $(SRC_DIR)/second_pass_utils.o
 
-data_handling.o: data_handling.c assembler.h
-	gcc -ansi -pedantic -Wall -c data_handling.c
+assembler: $(OBJS)
+	$(CC) $(CFLAGS) -o assembler $(OBJS)
 
-first_pass.o: first_pass.c first_pass.h assembler.h
-	gcc -ansi -pedantic -Wall -c first_pass.c
+$(SRC_DIR)/%.o: $(SRC_DIR)/%.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
-first_pass_utils.o: first_pass_utils.c first_pass.h assembler.h
-	gcc -ansi -pedantic -Wall -c first_pass_utils.c
-
-instruction_handling.o: instruction_handling.c assembler.h
-	gcc -ansi -pedantic -Wall -c instruction_handling.c
-
-macro_utils.o: macro_utils.c macro_expander.h assembler.h
-	gcc -ansi -pedantic -Wall -c macro_utils.c
-
-pre_assembler.o: pre_assembler.c assembler.h
-	gcc -ansi -pedantic -Wall -c pre_assembler.c
-
-second_pass.o: second_pass.c assembler.h second_pass_utils.h
-	gcc -ansi -pedantic -Wall -c second_pass.c
-
-second_pass_utils.o: second_pass_utils.c assembler.h second_pass_utils.h
-	gcc -ansi -pedantic -Wall -c second_pass_utils.c
-
-
-
+clean:
+	rm -f $(SRC_DIR)/*.o assembler
