@@ -24,6 +24,17 @@ gcc -Wall -ansi -pedantic
 
 The code must compile **without any warnings** under these flags.
 
+### 🏃 How to Run
+
+1. Build the project:
+   make
+
+2. Run the assembler on example files:
+   ./assembler examples/file1 examples/file2
+
+3. Clean build artifacts:
+   make clean
+
 ### Input Format
 
 The program accepts a list of assembly source file names (without the `.as` extension) as command-line arguments.
