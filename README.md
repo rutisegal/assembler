@@ -81,7 +81,7 @@ The assembler operates in **two passes**:
 
 1. **First Pass:**
 
-   * **Instruction Parsing & Syntax Validation:** Analyzes each line to extract opcodes/operands, validates addressing modes (`#val`, `r0-r7`, `label[index]`), and enforces strict syntax (comma rules, extra text).
+   * **Instruction Parsing & Syntax Validation:** Analyzes each line to extract opcodes and operands, validates addressing modes (e.g., `#val`, `r0-r7`, `label[index]`), and enforces strict syntax (e.g., comma placement, undefined symbols, extra parameters).
    * **Symbol Table Construction:** Records all label names, attributes (code/data/external), and memory addresses.
    * **Address Calculation:** Tracks and updates Instruction and Data Counters (IC/DC).
 
