@@ -81,12 +81,14 @@ The assembler operates in **two passes**:
 
 1. **First Pass:**
 
-   * Builds the **Symbol Table** (labels, attributes, and addresses).
-   * Calculates instruction and data addresses (IC/DC).
+   * **Instruction Parsing & Syntax Validation:** Analyzes each line to extract opcodes/operands, validates addressing modes (`#val`, `r0-r7`, `label[index]`), and enforces strict syntax (comma rules, extra text).
+   * **Symbol Table Construction:** Records all label names, attributes (code/data/external), and memory addresses.
+   * **Address Calculation:** Tracks and updates Instruction and Data Counters (IC/DC).
 
 2. **Second Pass:**
 
-   * Resolves symbol references and generates the final machine code.
+   * Resolves symbol references and completes memory encoding.
+   * Generates the final machine code output files.
 
 ### Memory Management
 
