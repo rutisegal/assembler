@@ -2,10 +2,6 @@
 
 # 📁 Two-Pass Assembler in ANSI C
 
-![C](https://img.shields.io/badge/Language-C89-blue.svg)
-![GCC](https://img.shields.io/badge/Compiler-GCC-orange.svg)
-![Course](https://img.shields.io/badge/Open%20University-20465-green.svg)
-
 This project was developed as part of **course 20465 (System Programming Lab)** at The Open University.
 It implements a **two-pass assembler** in **ANSI C**, capable of translating assembly source files into 16-bit machine code suitable for **loading and linkage**.
 
