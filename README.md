@@ -11,10 +11,10 @@ Developed collaboratively as part of course 20465:
 * **Esti Aker**
 
 ## ✨ Key Features
-* 🔄 **Pre-processor Macro Expansion:** Automatically expands `.mcro` blocks before parsing.
-* ⚡ **Two-Pass Translation:** Efficient symbol-table resolution and binary machine code generation.
-* 🎯 **Full Addressing Support:** Direct, Immediate, Index, and Register Direct modes.
-* 🛡️ **Zero-Tolerance Warning Compilation:** Built with strict flags (`-Wall -ansi -pedantic`).
+*  **Pre-processor Macro Expansion:** Automatically expands `.mcro` blocks before parsing.
+*  **Two-Pass Translation:** Efficient symbol-table resolution and binary machine code generation.
+*  **Full Addressing Support:** Direct, Immediate, Index, and Register Direct modes.
+*  **Zero-Tolerance Warning Compilation:** Built with strict flags (`-Wall -ansi -pedantic`).
 
 ---
 
@@ -30,7 +30,7 @@ gcc -Wall -ansi -pedantic
 
 The code must compile **without any warnings** under these flags.
 
-### 🏃 How to Run and Usage
+###  How to Run and Usage
 
 1. Build the executable:
    make
@@ -109,7 +109,12 @@ Example:
 prog.as  →  prog.ob, prog.ext, prog.ent
 ```
 
-If any errors are found, they are printed to **stdout**, and **no output files** are generated.
+### ⚠️ Error Handling
+
+The assembler performs thorough validation during both passes (e.g., syntax errors, undefined labels, or invalid operands). If errors are detected, descriptive error messages are printed to `stdout` with line numbers, and no output files are generated.
+
+![Error Handling Example](assets/file3_output_start.png)
+*Figure 1: Example of error detection and reporting during assembly.*
 
 ---
 
