@@ -5,6 +5,11 @@
 This project was developed as part of **course 20465**.
 It implements a **two-pass assembler** in **ANSI C**, capable of translating assembly source files into 16-bit machine code suitable for **loading and linkage**.
 
+## 👥 Authors
+Developed collaboratively as part of course 20465:
+* **Ruti Segal**
+* **Esti Aker**
+
 ---
 
 ## 🛠️ Project Requirements and Compilation
