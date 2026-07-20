@@ -1,14 +1,24 @@
 ---
 
-# 📁 Assembler Project – README
+# 📁 Two-Pass Assembler in ANSI C
 
-This project was developed as part of **course 20465**.
+![C](https://img.shields.io/badge/Language-C89-blue.svg)
+![GCC](https://img.shields.io/badge/Compiler-GCC-orange.svg)
+![Course](https://img.shields.io/badge/Open%20University-20465-green.svg)
+
+This project was developed as part of **course 20465 (System Programming Lab)** at The Open University.
 It implements a **two-pass assembler** in **ANSI C**, capable of translating assembly source files into 16-bit machine code suitable for **loading and linkage**.
 
 ## 👥 Authors
 Developed collaboratively as part of course 20465:
 * **Ruti Segal**
 * **Esti Aker**
+
+## ✨ Key Features
+* 🔄 **Pre-processor Macro Expansion:** Automatically expands `.mcro` blocks before parsing.
+* ⚡ **Two-Pass Translation:** Efficient symbol-table resolution and binary machine code generation.
+* 🎯 **Full Addressing Support:** Direct, Immediate, Index, and Register Direct modes.
+* 🛡️ **Zero-Tolerance Warning Compilation:** Built with strict flags (`-Wall -ansi -pedantic`).
 
 ---
 
